@@ -64,7 +64,6 @@ public class PeliculaSerieMapper {
         entity.setFecha_creacion(Date.valueOf(dtoGuardar.getFechaCreacion()));
         entity.setCalificacion(dtoGuardar.getCalificacion());
         entity.setPersonajes(personajesList);
-       // entity.setIdGenero(dtoGuardar.getIdgenero());
         return entity;
 
     }

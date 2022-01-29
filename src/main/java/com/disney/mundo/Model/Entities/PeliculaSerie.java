@@ -35,8 +35,6 @@ public class PeliculaSerie {
     Integer calificacion;
 
 
-
-
     @JsonIgnore
     @ManyToOne
     @JoinTable(
@@ -55,14 +53,5 @@ public class PeliculaSerie {
             inverseJoinColumns = @JoinColumn(name = "idpersonaje")
     )
     List<Personaje> personajes;
-
-
-
-//    @Override
-//    public String toString()
-//    {
-//        return PeliculaSerie.class.toString();
-//    }
-
 
 }

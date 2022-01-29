@@ -24,6 +24,5 @@ public class PeliculaSerieDTO {
     String fechaCreacion;
     Integer calificacion;
 
-
     List<Personaje> personajes;
 }

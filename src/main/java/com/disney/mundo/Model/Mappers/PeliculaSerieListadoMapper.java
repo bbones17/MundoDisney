@@ -32,7 +32,4 @@ public class PeliculaSerieListadoMapper {
         entity.setFecha_creacion(Date.valueOf(dto.getFechaCreacion()));
         return entity;
     }
-    
-    
-    
 }

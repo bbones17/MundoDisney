@@ -2,7 +2,6 @@ package com.disney.mundo.Controllers;
 import com.disney.mundo.Model.DTO.PeliculaSerieDTO;
 import com.disney.mundo.Model.DTO.PeliculaSerieGuardarDTO;
 import com.disney.mundo.Model.DTO.PeliculaSerieListadoDTO;
-import com.disney.mundo.Model.DTO.PersonajeDTO;
 import com.disney.mundo.Services.PeliculaSerieService;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
@@ -25,12 +24,6 @@ public class PeliculaSerieController {
         return ResponseEntity.ok(peliculaserieService.findAllListado(0,10,null));
     }
 
-//    @GetMapping("/all")
-//    public ResponseEntity<Page<PeliculaSerieDTO>> findAll()
-//    {
-//        return ResponseEntity.ok(peliculaserieService.findAll(0,10,null));
-//    }
-
 
     @GetMapping("/{idPeliculaSerie}")
     public ResponseEntity<Page<PeliculaSerieDTO>> findById(
@@ -45,7 +38,7 @@ public class PeliculaSerieController {
 
     @GetMapping("/search")
     public ResponseEntity<Page<PeliculaSerieDTO>> findByTituloContains(
-            @RequestParam(name="title",defaultValue = "",required = true)String titulo,
+            @RequestParam(name="title",defaultValue = "")String titulo,
             @RequestParam(name="genre",defaultValue = "" ,required = false) Integer idGenero,
             @RequestParam(name="order",defaultValue="DESC",required = false) String direction,
             @RequestParam(name="orderField",defaultValue = "titulo")String orderField)
@@ -53,8 +46,6 @@ public class PeliculaSerieController {
         return ResponseEntity.ok(peliculaserieService
                 .findByTituloContains(titulo,idGenero,direction,orderField));
     }
-
-
 
 
     @PostMapping("")
@@ -77,5 +68,5 @@ public class PeliculaSerieController {
             @PathVariable(name="idPeliculaSerie") Integer id){
         return ResponseEntity.ok(peliculaserieService.delete(id));
     }
-    
+
 }

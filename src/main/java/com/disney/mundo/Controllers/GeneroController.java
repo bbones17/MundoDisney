@@ -1,6 +1,5 @@
 package com.disney.mundo.Controllers;
 import com.disney.mundo.Model.DTO.GeneroDTO;
-import com.disney.mundo.Model.DTO.GeneroDTO;
 import com.disney.mundo.Model.DTO.GeneroGuardarDTO;
 import com.disney.mundo.Services.GeneroService;
 import org.springframework.data.domain.Page;

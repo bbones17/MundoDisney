@@ -7,7 +7,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -43,15 +42,6 @@ public class Personaje {
             inverseJoinColumns = @JoinColumn(name = "idpeliculaserie")
     )
     List<PeliculaSerie> peliculaseries;
-
-
-
-//    @Override
-//    public String toString()
-//    {
-//        return Personaje.class.toString();
-//    }
-
 
 
 }

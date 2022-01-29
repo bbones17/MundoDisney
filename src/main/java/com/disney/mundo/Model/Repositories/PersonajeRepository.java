@@ -15,6 +15,5 @@ public interface PersonajeRepository  extends PagingAndSortingRepository<Persona
         Personaje getById(Integer id);
         Page<Personaje> findByNombreContains(String nombre, Pageable pageable);
         Optional<Personaje> findById(Integer idpersonaje);
-
         Personaje findByNombre(String nombre);
 }

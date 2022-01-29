@@ -1,10 +1,6 @@
 package com.disney.mundo.Model.Repositories;
 
-import com.disney.mundo.Model.DTO.PeliculaSerieDTO;
-import com.disney.mundo.Model.DTO.PersonajeDTO;
-import com.disney.mundo.Model.Entities.Genero;
 import com.disney.mundo.Model.Entities.PeliculaSerie;
-import com.disney.mundo.Model.Entities.Personaje;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
